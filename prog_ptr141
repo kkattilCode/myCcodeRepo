@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int add(int a, int b)
+{
+return a+b;
+}
+
+void printHello(char *name)
+{
+printf("Hello %s",name);
+}
+
+void main()
+{
+int (*fp)(int,int);
+void (*ptr)(char*);
+fp=add;
+ptr=printHello;
+int c;
+c=fp(2,3);
+printf("%d\n",c);
+ptr("Friend");
+}
